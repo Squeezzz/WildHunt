@@ -6,7 +6,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Weapon weapon = new Weapon(5, 2f, 10);
+            weapon.Damage += 10;
+            weapon.Distance = 1000;
+            weapon.ReloadTime -= -10;
+            Console.WriteLine(weapon.Shoot());
         }
     }
 }
