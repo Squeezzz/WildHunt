@@ -10,6 +10,7 @@ namespace ConsoleApp
     {
         private int _distance;
 
+        public bool IsShotGun { get; set; }
         public int Damage { get; set; }
         public float ReloadTime { get; set; }
         public int Distance
