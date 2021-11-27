@@ -12,6 +12,8 @@ namespace ConsoleApp
 
         public string Name { get; set; }
 
+        public string LastName { get; set; }
+
         public int Age
         {
             get { return _age; }
@@ -20,15 +22,16 @@ namespace ConsoleApp
 
         public Person() { }
 
-        public Person(string name, int age)
+        public Person(string name, string lastName, int age)
         {
             Name = name;
+            LastName = lastName;
             Age = age;
         }
 
         public void PrintInfo()
         {
-            Console.WriteLine($"Type: {this.GetType()}\nName: {Name}\nAge:{Age}");
+            Console.WriteLine($"Type: {this.GetType()}\nName: {Name}\nAge:{Age}\nLastName: {LastName}");
         }
 
         public void PrintActualAge()
