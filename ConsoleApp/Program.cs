@@ -6,6 +6,12 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
+            Person p1 = new Person("Vage", 19);
+            p1.PrintInfo();
+            p1.Age = -1;
+            p1.Age = 27;
+
             Weapon weapon = new Weapon(5, 2f, 10);
             weapon.Damage += 10;
             weapon.Distance = 1000;
