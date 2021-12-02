@@ -9,6 +9,7 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+    [ApiController]
     [Route("[controller]")]
     public class HomeController : Controller
     {
@@ -22,9 +23,15 @@ namespace WebApp.Controllers
         [HttpGet("m1")]
         public async Task<ActionResult<string>> M1()
         {
-            string hi = "hello world";
+            string ans = "hello world";
 
-            return hi;
+            return ans;
+        }
+
+        [HttpGet("m2")]
+        public async Task<ActionResult<Animal>> M2()
+        {
+            return new Animal() { Name = "Animal1", Weight = 78};
         }
 
         [Route("index")]
