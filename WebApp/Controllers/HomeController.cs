@@ -19,6 +19,14 @@ namespace WebApp.Controllers
             _logger = logger;
         }
 
+        [HttpGet("m1")]
+        public async Task<ActionResult<string>> M1()
+        {
+            string hi = "hello world";
+
+            return hi;
+        }
+
         [Route("index")]
         public IActionResult Index()
         {
